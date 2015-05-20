@@ -27,12 +27,19 @@ public class IntToEng {
 				d *= 10;
 			}
 			input = remainder(input,d);
-//    		if(!isDivisible(input)) {
+
+			if(input!=0 && input<100) {
+				b += " "+zeroToNinetynine(input, ENG_LIST, ENG_LIST2);
+    		}else if(input!=0){
+        		b += " "+divisible(input, ENG_LIST, ENG_LIST3);
+    			d = 1;
+    			for(int i=1; i<digit(input); i++) {
+    				d *= 10;
+    			}
+    			input = remainder(input,d);
     			if(input!=0 && input<100) {
     				b += " "+zeroToNinetynine(input, ENG_LIST, ENG_LIST2);
-//    			}else{
-    				
-//    			}
+        		}
     		}
     	}
     	return b;
