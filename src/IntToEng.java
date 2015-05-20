@@ -16,53 +16,53 @@ public class IntToEng {
     	String b="";
     	String[] ENG_LIST= {"zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen" };
     	String[] ENG_LIST2={"0","0","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety","hundred"};
-    	if(divide(input)==2){
-    		if(remainder(input)==0) {
+    	if(divide(input)==2){  //20番台
+    		if(remainder(input)==0) {  //1の位が0
     			b=ENG_LIST2[divide(input)];
-    		}else{
-    	b=ENG_LIST2[divide(input)]+ENG_LIST[remainder(input)];
-    	}
-    	}else if(divide(input)==3){
-    		if(remainder(input)==0) {
+    		}else{  //1の位が0以外
+    			b=ENG_LIST2[divide(input)]+" "+ENG_LIST[remainder(input)];
+    		}
+    	}else if(divide(input)==3){  //30番台
+    		if(remainder(input)==0) {  //1の位が0
     			b=ENG_LIST2[divide(input)];
-    		}else{
-    		b=ENG_LIST2[divide(input)]+ENG_LIST[remainder(input)];
+    		}else{  //1の位が0以外
+    			b=ENG_LIST2[divide(input)]+" "+ENG_LIST[remainder(input)];
     		}
     	}else if(divide(input)==4){
     		if(remainder(input)==0) {
     			b=ENG_LIST2[divide(input)];
     		}else{
-    		b=ENG_LIST2[divide(input)]+ENG_LIST[remainder(input)];
+    		b=ENG_LIST2[divide(input)]+" "+ENG_LIST[remainder(input)];
     		}	
     	}else if(divide(input)==5){
     		if(remainder(input)==0) {
     			b=ENG_LIST2[divide(input)];
     		}else{
-    		b=ENG_LIST2[divide(input)]+ENG_LIST[remainder(input)];
+    		b=ENG_LIST2[divide(input)]+" "+ENG_LIST[remainder(input)];
     		}
     	}else if(divide(input)==6){
     		if(remainder(input)==0) {
     			b=ENG_LIST2[divide(input)];
     		}else{
-    		b=ENG_LIST2[divide(input)]+ENG_LIST[remainder(input)];
+    		b=ENG_LIST2[divide(input)]+" "+ENG_LIST[remainder(input)];
     		}
     	}else if(divide(input)==7){
     		if(remainder(input)==0) {
     			b=ENG_LIST2[divide(input)];
     		}else{
-    		b=ENG_LIST2[divide(input)]+ENG_LIST[remainder(input)];
+    		b=ENG_LIST2[divide(input)]+" "+ENG_LIST[remainder(input)];
     		}
     	}else if(divide(input)==8){
     		if(remainder(input)==0) {
     			b=ENG_LIST2[divide(input)];
     		}else{
-    			b=ENG_LIST2[divide(input)]+ENG_LIST[remainder(input)];
+    			b=ENG_LIST2[divide(input)]+" "+ENG_LIST[remainder(input)];
     		}
     	}else if(divide(input)==9){
     		if(remainder(input)==0) {
     			b=ENG_LIST2[divide(input)];
     		}else{
-    		b=ENG_LIST2[divide(input)]+ENG_LIST[remainder(input)];
+    		b=ENG_LIST2[divide(input)]+" "+ENG_LIST[remainder(input)];
     		}
     	}else if(divide(input)== 10) {
     		b=ENG_LIST2[divide(input)];
@@ -80,12 +80,9 @@ public class IntToEng {
     }
     
     static int divide(int input){
-    	return division(input);
-    }
-
-	static int division(int input) {
+    	//return division(input);
 		int divide;
     	divide=input/10;
     	return divide;
-	}
+    }
 }

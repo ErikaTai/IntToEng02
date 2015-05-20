@@ -27,7 +27,7 @@ public class IntoToEngTest {
 	@Test
 	public void テスト22() {
 		IntToEng ite = new IntToEng();
-		String expected = "twentytwo";
+		String expected = "twenty two";
 		String actual = ite.translateEng(22);
 		assertThat(actual, is(expected));
 		//fail("Not yet implemented");
@@ -35,7 +35,7 @@ public class IntoToEngTest {
 	@Test
 	public void テスト33() {
 		IntToEng ite = new IntToEng();
-		String expected = "thirtythree";
+		String expected = "thirty three";
 		String actual = ite.translateEng(33);
 		assertThat(actual, is(expected));
 		//fail("Not yet implemented");
@@ -74,5 +74,93 @@ public class IntoToEngTest {
 		String actual = ite.translateEng(100);
 		assertThat(actual, is(expected));
 		//fail("Not yet implemented");
+	}
+	
+	@Test
+	public void テスト119() {
+		IntToEng ite = new IntToEng();
+		String expected = "one hundred nineteen";
+		String actual = ite.translateEng(119);
+		assertThat(actual, is(expected));
+	}
+	
+	@Test
+	public void テスト120() {
+		IntToEng ite = new IntToEng();
+		String expected = "one hundred twenty";
+		String actual = ite.translateEng(120);
+		assertThat(actual, is(expected));
+	}
+	
+	@Test
+	public void テスト151() {
+		IntToEng ite = new IntToEng();
+		String expected = "one hundred fifty one";
+		String actual = ite.translateEng(151);
+		assertThat(actual, is(expected));
+	}
+	
+	@Test
+	public void テスト1000() {
+		IntToEng ite = new IntToEng();
+		String expected = "one thousand";
+		String actual = ite.translateEng(1000);
+		assertThat(actual, is(expected));
+	}
+	
+	@Test
+	public void テスト1019() {
+		IntToEng ite = new IntToEng();
+		String expected = "one thousand nineteen";
+		String actual = ite.translateEng(1019);
+		assertThat(actual, is(expected));
+	}
+	
+	@Test
+	public void テスト1020() {
+		IntToEng ite = new IntToEng();
+		String expected = "one thousand twenty";
+		String actual = ite.translateEng(1020);
+		assertThat(actual, is(expected));
+	}
+	
+	@Test
+	public void テスト1100() {
+		IntToEng ite = new IntToEng();
+		String expected = "one thousand one hundred";
+		String actual = ite.translateEng(1100);
+		assertThat(actual, is(expected));
+	}
+	
+	@Test
+	public void テスト1119() {
+		IntToEng ite = new IntToEng();
+		String expected = "one thousand one hundred nineteen";
+		String actual = ite.translateEng(1119);
+		assertThat(actual, is(expected));
+	}
+	
+	@Test
+	public void テスト1120() {
+		IntToEng ite = new IntToEng();
+		String expected = "one thousand one hundred twenty";
+		String actual = ite.translateEng(1120);
+		assertThat(actual, is(expected));
+	}
+	
+	@Test
+	public void テスト1121() {
+		IntToEng ite = new IntToEng();
+		String expected = "one thousand one hundred twenty one";
+		String actual = ite.translateEng(1121);
+		assertThat(actual, is(expected));
+	}
+	
+	@Test
+	public void テスト10000() {
+		IntToEng ite = new IntToEng();
+		String expected = "ten thousand";
+		String actual = ite.translateEng(10000);
+		assertThat(actual, is(expected));
 	}
 }
