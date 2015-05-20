@@ -22,17 +22,17 @@ public class IntToEng {
     		b = zeroToNinetynine(input, ENG_LIST, ENG_LIST2);
     	}else if(input<10000){  //100以上10000未満の場合
     		b = divisible(input, ENG_LIST, ENG_LIST3);
-    		if(!isDivisible(input)) {
-    			int d = 1;
-    			for(int i=0; i<digit(input)-1; i++) {
-    				d *= 10;
-    			}
-    			input = remainder(input,d);
-    			if(input<100) {
+			int d = 1;
+			for(int i=1; i<digit(input); i++) {
+				d *= 10;
+			}
+			input = remainder(input,d);
+//    		if(!isDivisible(input)) {
+    			if(input!=0 && input<100) {
     				b += " "+zeroToNinetynine(input, ENG_LIST, ENG_LIST2);
-    			}else{
+//    			}else{
     				
-    			}
+//    			}
     		}
     	}
     	return b;
