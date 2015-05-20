@@ -162,6 +162,7 @@ public class IntoToEngTest {
 		String expected = "ten thousand";
 		String actual = ite.translateEng(10000);
 
+
 		assertThat(actual, is(expected));
 	}
 }

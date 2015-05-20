@@ -21,29 +21,38 @@ public class IntToEng {
     	if(input<100){
     		b = zeroToNinetynine(input, ENG_LIST, ENG_LIST2);
     	}else if(input<10000){  //100以上10000未満の場合
-    		b = divisible(input, ENG_LIST, ENG_LIST3);
-			int d = 1;
+    		b = hundredToThousand(input, ENG_LIST, ENG_LIST2, ENG_LIST3);
+    	}else if(input<1000000){
+    		b = ENG_LIST[input/1000]+" thousand";
+    	}
+    	return b;
+    }
+
+	public static String hundredToThousand(int input, String[] ENG_LIST,
+			String[] ENG_LIST2, String[] ENG_LIST3) {
+		String b;
+		b = divisible(input, ENG_LIST, ENG_LIST3);
+		int d = 1;
+		for(int i=1; i<digit(input); i++) {
+			d *= 10;
+		}
+		input = remainder(input,d);
+
+		if(input!=0 && input<100) {
+			b += " "+zeroToNinetynine(input, ENG_LIST, ENG_LIST2);
+		}else if(input!=0){
+			b += " "+divisible(input, ENG_LIST, ENG_LIST3);
+			d = 1;
 			for(int i=1; i<digit(input); i++) {
 				d *= 10;
 			}
 			input = remainder(input,d);
-
 			if(input!=0 && input<100) {
 				b += " "+zeroToNinetynine(input, ENG_LIST, ENG_LIST2);
-    		}else if(input!=0){
-        		b += " "+divisible(input, ENG_LIST, ENG_LIST3);
-    			d = 1;
-    			for(int i=1; i<digit(input); i++) {
-    				d *= 10;
-    			}
-    			input = remainder(input,d);
-    			if(input!=0 && input<100) {
-    				b += " "+zeroToNinetynine(input, ENG_LIST, ENG_LIST2);
-        		}
-    		}
-    	}
-    	return b;
-    }
+			}
+		}
+		return b;
+	}
 
 	public static String zeroToNinetynine(int input, String[] ENG_LIST,
 			String[] ENG_LIST2) {
