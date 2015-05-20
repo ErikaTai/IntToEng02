@@ -70,7 +70,7 @@ public class IntoToEngTest {
 	@Test
 	public void テスト100() {
 		IntToEng ite = new IntToEng();
-		String expected = "hundred";
+		String expected = "one hundred";
 		String actual = ite.translateEng(100);
 		assertThat(actual, is(expected));
 		//fail("Not yet implemented");
@@ -161,6 +161,7 @@ public class IntoToEngTest {
 		IntToEng ite = new IntToEng();
 		String expected = "ten thousand";
 		String actual = ite.translateEng(10000);
+
 		assertThat(actual, is(expected));
 	}
 }
