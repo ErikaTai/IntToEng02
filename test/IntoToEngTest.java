@@ -161,8 +161,86 @@ public class IntoToEngTest {
 		IntToEng ite = new IntToEng();
 		String expected = "ten thousand";
 		String actual = ite.translateEng(10000);
+		assertThat(actual, is(expected));
+	}
+	
+	@Test
+	public void テスト10001() {
+		IntToEng ite = new IntToEng();
+		String expected = "ten thousand one";
+		String actual = ite.translateEng(10001);
+		assertThat(actual, is(expected));
+	}
+	
+	@Test
+	public void テスト10011() {
+		IntToEng ite = new IntToEng();
+		String expected = "ten thousand eleven";
+		String actual = ite.translateEng(10011);
+		assertThat(actual, is(expected));
+	}
+	
+	@Test
+	public void テスト10030() {
+		IntToEng ite = new IntToEng();
+		String expected = "ten thousand thirty";
+		String actual = ite.translateEng(10030);
+		assertThat(actual, is(expected));
+	}
+	
+	@Test
+	public void テスト10042() {
+		IntToEng ite = new IntToEng();
+		String expected = "ten thousand fourty two";
+		String actual = ite.translateEng(10042);
+		assertThat(actual, is(expected));
+	}
+	
+	@Test
+	public void テスト10101() {
+		IntToEng ite = new IntToEng();
+		String expected = "ten thousand one hundred one";
+		String actual = ite.translateEng(10101);
+		assertThat(actual, is(expected));
+	}
+	
+	@Test
+	public void テスト10111() {
+		IntToEng ite = new IntToEng();
+		String expected = "ten thousand one hundred eleven";
+		String actual = ite.translateEng(10111);
+		assertThat(actual, is(expected));
+	}
 
-
+	@Test
+	public void テスト10220() {
+		IntToEng ite = new IntToEng();
+		String expected = "ten thousand two hundred twenty";
+		String actual = ite.translateEng(10220);
+		assertThat(actual, is(expected));
+	}
+	
+	@Test
+	public void テスト10222() {
+		IntToEng ite = new IntToEng();
+		String expected = "ten thousand two hundred twenty two";
+		String actual = ite.translateEng(10222);
+		assertThat(actual, is(expected));
+	}
+	
+	@Test
+	public void テスト15000() {
+		IntToEng ite = new IntToEng();
+		String expected = "fifteen thousand";
+		String actual = ite.translateEng(15000);
+		assertThat(actual, is(expected));
+	}	
+	
+	@Test
+	public void テスト100000() {
+		IntToEng ite = new IntToEng();
+		String expected = "one hundred thousand";
+		String actual = ite.translateEng(100000);
 		assertThat(actual, is(expected));
 	}
 }

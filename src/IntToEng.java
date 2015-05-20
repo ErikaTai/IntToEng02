@@ -22,9 +22,12 @@ public class IntToEng {
     		b = zeroToNinetynine(input, ENG_LIST, ENG_LIST2);
     	}else if(input<10000){  //100以上10000未満の場合
     		b = hundredToThousand(input, ENG_LIST, ENG_LIST2, ENG_LIST3);
-    	}else if(input<1000000){
+    	}else if(input<100000){
     		b = ENG_LIST[input/1000]+" thousand";
-    	}
+    		if(input%1000==0) return b;
+    		if(input%1000<100) b += " "+zeroToNinetynine(input%1000, ENG_LIST, ENG_LIST2);
+    		else b += " "+hundredToThousand(input%1000, ENG_LIST, ENG_LIST2, ENG_LIST3);
+    	}else if(input==100000) b = "one hundred thousand";
     	return b;
     }
 
